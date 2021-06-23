@@ -1,13 +1,593 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f8f8f8;
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    font-family: 'Sarabun', sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+section{
+    max-width:1220px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/* Typograpgy */
+
+/* ==========
+    Layout   
+   =========*/
+
+/* Header */
+
+.header{
+    background-color: #fff;;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    box-shadow: 0 1px 1px 0 #f5f5f5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header-inner-container {
+    padding: 0.5em 0;
+    max-width:1220px;
+    margin: 0 auto;
+    padding: 0 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+}
+
+.header-logo__img{
+    max-width: 5rem;
+}
+
+.logo__link--name{
+    text-decoration: none;
+    color:inherit;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    opacity: 0.9;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list__item {
+    margin-right: 2.5rem;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: #707070;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.nav__link.active {
+    color: #202020;
+    font-weight: bold;
+}
+
+.nav-list__item:hover .nav__link{
+    color:#202020;
+}
+
+.btn--login,
+.btn--sign-up {
+    width: 11rem;
+    padding: 0.4em 0;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn--login{
+    margin-right: 1rem;
+    background-color: transparent;
+    border: 1px solid #24a0ed;
+    color: #24a0ed;
+}
+
+.btn--sign-up{
+    background-color: #24a0ed;
+    color: white;
+    border: 1px solid #24a0ed;
+}
+
+.btn--login:hover {
+    box-shadow: 0 1px 12px 0 #cccccc;
+}
+
+.btn--sign-up:hover {
+    background-color: #006eb3;
+}
+
+/* previous courses */
+.prev-page{
+    max-width:1220px;
+    margin: 0 auto;
+    padding: 0 1em;
+    margin-top: 7em;
+}
+
+.prev__link{
+    text-decoration: none;
+    color: #707070;
+    font-size: 1.1rem;
+}
+
+.prev__link:hover {
+    color: #202020;
+}
+
+/* intro section */
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.intro-about {
+    width: 57%;
+}
+
+.intro__card{
+    width: 38%;
+    padding: 1.5em 2em;
+    border: 1px solid #cacaca;
+    background-color: white;
+}
+
+.intro-card__img{
+    display: block;
+    width:100%;
+    max-width: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-values-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-value__num{
+    font-size: 2rem;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.card-value__title{
+    color: #606060;
+    font-size: 1.1rem;
+    margin-top: 0.75em;
+}
+
+.start-course-btn{
+    width:100%;
+    padding: 1em 2em;
+    background-color:black;
+    color: white;
+    letter-spacing: 2px;
+    border: none;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+.start-course-btn:hover {
+    background-color: #202020;
+}
+
+/* styling intro about here below */
+.intro__title{
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+}
+
+.intro__subtitle{
+    font-size:1.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight:400;
+}
+
+.intro__desc{
+    color: #606060;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+.intro__read-more{
+    color:inherit;
+}
+
+.intro__prereq > a{
+    color:#606060;
+    font-size: 1.1rem;
+}
+
+.intro__read-more:hover,
+.intro__prereq:hover > a {
+    color: #202020;
+}
+
+/* Card holder section */
+.card-holder{
+    margin-top: 3rem;
+}
+
+.card-holder__info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.number-container{
+    /* padding: 0.5rem; */
+    width:2.25rem;
+    height: 2.25rem;
+    background-color: #bdc8ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-details{
+    margin-left: 1.5rem;
+}
+
+.card-holder__title{
+    font-size: 1.75rem;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}
+
+.card-holder__subtitle{
+    font-size: 1rem;
+    color:#707070;
+    margin-top: 0.3rem;
+}
+
+.collapse-btn{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.collapse-btn:hover{
+    color: #202020;
+}
+
+.cards{
+    display: flex;
+    align-items: stretch;
+    /* flex-wrap: wrap; */
+    /* overflow: hidden; */
+    /* position: relative; */
+}
+
+.card-holder__toggle-btn{
+    position: absolute;
+    background-color: white;
+    background: linear-gradient(to right , rgba(255,255,255, 0.1) , rgba(255,255,255, 0.6));
+    right: 0;
+    border: none;
+    font-size: 5rem;
+    padding: 7rem 2rem 7rem 5rem;
+    /* margin-top: 2rem; */
+    cursor: pointer;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-holder:hover .card-holder__toggle-btn{
+    background-color: rgba(255, 255, 255 , 0.5);
+    opacity: 1;
+}
+
+/* Cards */
+.card{
+    min-width: 300px;
+    max-width: 300px;
+    border: 20px solid #f8f8f8;
+    cursor: pointer;
+    display: grid;
+    margin-right: 3rem;
+}
+
+.card:hover {
+    border: 20px solid rgb(244, 244, 244);
+}
+
+.card__img{
+    display: block;
+    width:100%;
+}
+
+.card__title{
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    padding-left: 0.2rem;
+}
+
+.card__subtitle{
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+    color: #707070;
+    padding-left: 0.2rem;
+}
+
+/* locked image style */
+.card__img-data{
+    position: relative;
+    z-index: -1
+}
+
+.locked-container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 15, 15, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.locked-container-message{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(97, 63, 63, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.locked-message{
+    opacity:0;
+    text-align: center;
+    color: white;
+    font-size: 0.85rem;
+}
+
+.card:hover .locked-container * {
+    opacity: 0;
+}
+
+.card:hover .locked-message{
+    opacity: 0.9;
+}
+
+/* ends here */
+.card__progress-bar{
+    height: 3px;
+    width: 95%;
+    background-color: #dddddd;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: end;
+}
+
+/* Next Steps */
+.next-steps-container{
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+.next-steps__title{
+    text-transform: uppercase;
+    color: #707070;
+    font-size: 1rem;
+    margin: 0;
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid #e2e2e2;
+    opacity: 0.8;
+}
+
+.next-steps{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.next-step-card{
+    width:49%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.next-step__left-col{
+    width: 30%;
+}
+
+.next-step__right-col{
+    width: 67%;
+}
+
+.next-step__img{
+    display: block;
+    width: 5rem;
+}
+
+.next-step__link--title{
+    color: inherit;
+    text-decoration: none;
+}
+
+.next-step__link--desc{
+    color: inherit;
+    text-decoration: none;
+}
+
+.next-step-card__desc{
+    color: #707070;
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-top: 0.5rem;
+    opacity: 0.75;
+}
+
+.next-step-card:hover .next-step__link--title,
+.next-step-card:hover .next-step__link--desc,
+.next-step-card:hover .next-step__img{
+    opacity: 0.75;
+}
+
+.next-step-card:hover .next-step__link--title {
+    opacity: 0.65;
+}
+
+/* Styling the modal below (login / sign-up form) */
+
+.modal{
+    display: flex;
+    max-width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    top: 10%;
+    /* color: white; */
+    z-index: 1000;
+}
+
+.modal__left{
+    width:50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__left > i {
+    font-size: 10rem;
+    transition: all 250ms ease-in-out;
+    animation-name: rocket;
+    animation-duration: 1s;
+}
+
+.modal__right{
+    width:50%;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.modal__title{
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+.modal__link{
+    display: block;
+    text-decoration: none;
+    padding: 1em 8em;
+    border-radius: 0.5rem;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__link--fb{
+    background-color: #4267B2;
+    color: white;
+    border: 1px solid #4267B2;
+}
+
+.modal__link--google{
+    border: 1px solid #404040;
+    color: #404040;
+}
+
+.modal__link--email{
+    color: #404040;
+    background-color: #dddddd;
+    border: 1px solid #dddddd;
+    margin-bottom: 0;
+}
+
+.modal__existing-user{
+    color: #404040;
+}
+
+.modal__existing-user > a {
+    color: inherit
+}
+
+.overlay{
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    height:100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(15, 15, 15, 0.9);
+    z-index: 100;
+    
+}
+
+@keyframes rocket {
+    from {
+        transform: scale(0.7) translateX(-50%) translateY(25%);
+    }
+
+    to {
+        transform: scale(1) translateX(0) translateY(0);
+    }
 }
