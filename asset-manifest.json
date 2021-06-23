@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/internshala-brilliant/static/css/main.f92ed72a.chunk.css",
+    "main.js": "/internshala-brilliant/static/js/main.d61ba97e.chunk.js",
+    "main.js.map": "/internshala-brilliant/static/js/main.d61ba97e.chunk.js.map",
+    "runtime-main.js": "/internshala-brilliant/static/js/runtime-main.a17b30a8.js",
+    "runtime-main.js.map": "/internshala-brilliant/static/js/runtime-main.a17b30a8.js.map",
+    "static/js/2.dd886650.chunk.js": "/internshala-brilliant/static/js/2.dd886650.chunk.js",
+    "static/js/2.dd886650.chunk.js.map": "/internshala-brilliant/static/js/2.dd886650.chunk.js.map",
+    "static/js/3.c67693e0.chunk.js": "/internshala-brilliant/static/js/3.c67693e0.chunk.js",
+    "static/js/3.c67693e0.chunk.js.map": "/internshala-brilliant/static/js/3.c67693e0.chunk.js.map",
+    "index.html": "/internshala-brilliant/index.html",
+    "static/css/main.f92ed72a.chunk.css.map": "/internshala-brilliant/static/css/main.f92ed72a.chunk.css.map",
+    "static/js/2.dd886650.chunk.js.LICENSE.txt": "/internshala-brilliant/static/js/2.dd886650.chunk.js.LICENSE.txt",
+    "static/media/brilliant-logo.76287c14.png": "/internshala-brilliant/static/media/brilliant-logo.76287c14.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a17b30a8.js",
+    "static/js/2.dd886650.chunk.js",
+    "static/css/main.f92ed72a.chunk.css",
+    "static/js/main.d61ba97e.chunk.js"
+  ]
+}
