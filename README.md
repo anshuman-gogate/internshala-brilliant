@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Title : Clone of brilliant.org using React.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Description : 
+  This webpage was made using React.js, apart from that I only used the Material UI library and rest of the code was written from scratch.
+  
+  Structure -
+    - All the components are in the src folder.
+    - All the components referenced in App.js are present in the Components folder.
+    - Entire CSS is in the index.css file in src folder.
+    - Images are in the images folder, also a lot of images are called from external websites.
+    - Icons are either taken from the Material UI Library or from Font Awesome Website.
+    - Production build of the project is in the build folder.
+    
+  Basic Features -
+    - Sticky Navbar - Navbar will always stick to the top while scrolling making a good user experience.
+    - Modal(pop-up) - Clicking on login / signup button , course cards , start course button makes a modal pop out asking user to login/signup.
+    - Premium Courses - Premium courses are by default locked and have different styling than the normal courses.
+    - show/hide course button - buttons are provided to hide or show courses in each section
+    
+  Layout -
+     The layout consists of-
+      - A Header Component-
+          Header further consists of 3 sub-components :
+            - Logo component 
+            - Navbar 
+            - login/signup
+      - Intro Component-
+          Intro further consists of 2 sub-components :
+            - Intro About
+            - Intro Card
+      - Previous Page Component
+      - Card Holder Section Component-
+          This section is resued multiple times throughout the website and has 1 sub-component :
+            - Card { This component is called multiple times throughout all sections }
+      - Next step Component-
+          This component futher renders 1 sub-component :
+            - Next Card 
+            
+   Additional Information -
+    - Working with Material UI-
+        Install the package in your project directory with:
+          // with npm
+          npm install @material-ui/icons
+          // with yarn
+          yarn add @material-ui/icons
+        Icons can be imported like -
+          import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+            Add this to the top of your Component file and then call using name like <AccessAlarmIcon />
+            
+   - Working with React.js -
+        - Install node.js and npm
+        - Install create-react-app globally with following command in your terminal
+            npm install -g create-react-app
+        - Command to create new project
+            npx create-react-app <projectname>
+        - To start a development server run following command
+            npm start
+        - To create build directory with production build run following command
+            npm run build
+        - To serve production build with a static server run following command
+            serve -s build
